@@ -7,7 +7,7 @@
 #
 # You will need to install the Bayesian optimization module. Running a cell with an exclamation point in the beginning of the command will run it as a shell command — please do this to install this module from our notebook in the cell below.
 # %% codecell
-#! pip install bayesian-optimization
+# ! pip install bayesian-optimization
 # %% codecell
 import warnings
 warnings.filterwarnings('ignore')
@@ -70,8 +70,9 @@ print(optimizer.max['params']);optimizer.max['target']
 # **<font color='teal'> You can load the zipped csv files just as you would regular csv files using Pandas read_csv. In the next cell load the train and test data into two seperate dataframes. </font>**
 #
 # %% codecell
-train_df = pd.read_csv('flight_delays_train.csv.zip')
-test_df = pd.read_csv('flight_delays_test.csv.zip')
+cd_data = 'data/'
+train_df = pd.read_csv(cd_data+'flight_delays_train.csv.zip')
+test_df = pd.read_csv(cd_data+'flight_delays_test.csv.zip')
 # %% markdown
 # **<font color='teal'> Print the top five rows of the train dataframe and review the columns in the data. </font>**
 # %% codecell
